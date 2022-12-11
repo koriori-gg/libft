@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihashimo <maaacha.kuri05@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 23:49:41 by ihashimo          #+#    #+#             */
-/*   Updated: 2022/11/06 17:53:00 by ihashimo         ###   ########.fr       */
+/*   Created: 2022/11/07 13:29:16 by ihashimo          #+#    #+#             */
+/*   Updated: 2022/11/07 15:40:12 by ihashimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	t_list	*ptr;
+	t_list	*cur;
+
+	if (!lst || !f)
+		return (NULL);
+	ptr = ft_lstnew(f(lst->content));
+	if (!ptr)
+		return (NULL);
+	cur = ptr;
+	lst = lst->next;
+	while (lst && cur)
+	{
+		cur->next = ft_lstnew(f(lst->content));
+		if (!cur->next)
+			ft_lstclear(&ptr, del);
+		cur = cur->next;
+		lst = lst->next;
+	}
+	return (ptr);
 }
-/*
-int main(void)
-{
-	ft_putstr_fd("abcde",1);
-	return 0;
-}
-*/

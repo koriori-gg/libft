@@ -6,7 +6,7 @@
 /*   By: ihashimo <maaacha.kuri05@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 23:49:23 by ihashimo          #+#    #+#             */
-/*   Updated: 2022/11/04 21:32:23 by ihashimo         ###   ########.fr       */
+/*   Updated: 2022/11/08 00:32:40 by ihashimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t		i;
-	char		*d;
-	const char	*s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	if (dest == NULL && src == NULL)
 		return (NULL);
-	d = (char *)dest;
-	s = (const char *)src;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	if (dest < src)
 	{
 		i = 0;

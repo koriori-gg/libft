@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihashimo <maaacha.kuri05@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 23:49:41 by ihashimo          #+#    #+#             */
-/*   Updated: 2022/11/06 17:53:00 by ihashimo         ###   ########.fr       */
+/*   Created: 2022/11/07 13:29:12 by ihashimo          #+#    #+#             */
+/*   Updated: 2022/11/07 15:40:07 by ihashimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
-/*
-int main(void)
-{
-	ft_putstr_fd("abcde",1);
-	return 0;
-}
-*/
