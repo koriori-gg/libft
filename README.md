@@ -12,17 +12,17 @@ The function is written in C language and thus needs the gcc compiler and some s
 
 ### Instructions
 #### 1.clone
-"""
+```
 git clone git@github.com:koriori-gg/libft.git
-"""
+```
 #### 2. Using it in your code
 To use the function in your code, simply include its header:
-"""
+```
 #include "libft.h"
-"""
+```
 and, when compiling your code, add "libft.a":
-"""
+```
 make all
 gcc main.c libft.a
 ./a.out
-"""
+```
