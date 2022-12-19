@@ -1,6 +1,5 @@
 # libft
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/koriori-gg/libft)
-![Lines of code](https://img.shields.io/tokei/lines/github/koriori-gg/libft?color=9cf)
 ![GitHub language count](https://img.shields.io/github/languages/count/koriori-gg/libft?color=yellow)
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/koriori-gg/libft)
 
