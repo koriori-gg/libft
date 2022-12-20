@@ -1,4 +1,6 @@
-# libft
+<h1 align="center">
+	📖 libft
+</h1>
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/koriori-gg/libft)
 ![GitHub language count](https://img.shields.io/github/languages/count/koriori-gg/libft?color=yellow)
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/koriori-gg/libft)
