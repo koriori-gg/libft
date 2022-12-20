@@ -10,8 +10,6 @@
 	<a href="#%EF%B8%8F-about">About</a>
 	<span> · </span>
 	<a href="#%EF%B8%8F-usage">Usage</a>
-	<span> · </span>
-	<a href="#-testing">Testing</a>
 </h3>
 
 ## 💡 About the project
