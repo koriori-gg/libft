@@ -60,7 +60,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
