@@ -6,7 +6,7 @@
 /*   By: ihashimo <maaacha.kuri05@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 23:49:13 by ihashimo          #+#    #+#             */
-/*   Updated: 2022/12/19 20:04:04 by ihashimo         ###   ########.fr       */
+/*   Updated: 2023/02/01 09:54:10 by ihashimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return ((void *)&s[i]);
+			return (&((unsigned char *)s)[i]);
 		i++;
 	}
 	return (NULL);
@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int main(void)
 {
 	char str[] = "abcdef\0ghij";
-	char *p;    
+	char *p;
 	p = memchr(str, 'h', 12);
 	printf("検索文字は文字列の%ld番目\n",p - str);
 	printf("%s\n",p);
